@@ -4,7 +4,8 @@
 Analisar indicadores educacionais utilizando Python, buscando identificar relações entre variáveis e desempenho educacional.
 
 ## 📊 Dados
-Os dados utilizados contêm informações relacionadas a aspectos educacionais, como desempenho, indicadores sociais e educacionais.
+Os dados utilizados foram retirados da plataforma Kaggle e contêm informações relacionadas a aspectos educacionais, como desempenho, indicadores sociais e educacionais.
+Disponível em: https://www.kaggle.com/datasets/kundanbedmutha/exam-score-prediction-dataset
 
 ## 🛠 Tecnologias Utilizadas
 - Python
@@ -33,3 +34,4 @@ Os resultados mostram a importância de fatores educacionais no desempenho dos e
 
 ## 👩‍💻 Autora
 Kizzy da Costa Bastos
+
