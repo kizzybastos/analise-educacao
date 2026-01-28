@@ -22,9 +22,9 @@ Disponível em: https://www.kaggle.com/datasets/kundanbedmutha/exam-score-predic
 - Interpretação dos resultados
 
 ## 📋 Estrutura do Projeto
-📁 data/ → Base de dados
-📁 notebooks/ → Análises em Jupyter
-README.md → Documentação
+- 📁 data/ → Base de dados
+- 📁 notebooks/ → Análises em Jupyter
+- README.md → Documentação
 
 ## ✅ Resultados
 A análise permitiu identificar padrões relevantes entre os indicadores educacionais e o desempenho observado.
@@ -34,5 +34,6 @@ Os resultados mostram a importância de fatores educacionais no desempenho dos e
 
 ## 👩‍💻 Autora
 Kizzy da Costa Bastos
+
 
 
