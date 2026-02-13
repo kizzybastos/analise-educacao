@@ -6,6 +6,7 @@ output: html_document
 ---
 
 # Análise dados Referentes à Educação
+
 ```{r}
 #Importando os dados
 tabela = read.csv("../../data/Exam_Score_Prediction.csv")
@@ -19,5 +20,52 @@ head(tabela,10)
 modelo = lm(exam_score ~ age + study_hours + class_attendance + sleep_hours, data = tabela)
 
 summary(modelo)
+```
+### Criando Gráficos
+
+```{r}
+library(ggplot2)
+ggplot(tabela, aes(x = exam_score)) + geom_histogram()
+```
+
+```{r}
+ggplot(tabela, aes(x = study_hours, y = exam_score)) + 
+  geom_point(color = "blue", size = 0.5, alpha = 0.2) + 
+  geom_smooth(method = "lm")
+
+cor(tabela$study_hours, tabela$exam_score)
+```
+
+```{r}
+library(ggplot2)
+
+numericas = c("study_hours", "class_attendance", "sleep_hours")
+
+for(coluna in numericas) {
+
+  correlacao <- cor(tabela[[coluna]], tabela$exam_score, method = "pearson")
+  print(correlacao)
+  
+  grafico = ggplot(tabela, aes(x = .data[[coluna]], y = exam_score)) +
+    geom_point(color = "blue", alpha = 0.2, size = 0.5) +
+    geom_smooth(method = "lm")
+   
+  print(grafico)
+}
+```
+
+```{r}
+library(ggplot2)
+
+dummies = c("study_method", "gender", "course", "sleep_quality", "exam_difficulty")
+
+for(coluna in dummies) {
+  
+  grafico = ggplot(tabela, aes(x = .data[[coluna]], y = exam_score)) +
+    geom_boxplot()
+   
+  print(grafico)
+}
+
 ```
 
